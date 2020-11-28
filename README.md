@@ -1,27 +1,27 @@
 # TftEasyMatchmakingTracker
+A tool for tracking who you are eligible to play in teamfight tactics
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+## Usage
+This tracker is only designed to be launched by the python script in `launcher/tft_tracker_launcher.py`
+which will use game logs to automatically populate the list of usernames in your game and launch the
+tracker using your default operating system browser.
 
-## Development server
+### Installation
+The launcher script requires a python installation with version >= 3.7.
+A windows installer can be found at https://www.python.org/downloads/release/python-379/. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The launcher, `tft_tracker_launcher.py` can be downloaded from the latest github release location: https://github.com/artemigkh/tft-easy-matchmaking-tracker/releases/tag/v1.0
+Additionally, a wrapper batch file `start_tft_tracker_latest_game.bat` is provided for a 
+"one click launch" on Windows. 
 
-## Code scaffolding
+### Starting the Tracker
+If your league installation is not at the default `C:\Riot Games\League of Legends` location,
+alter the first line of `tft_tracker_launcher.py` to the game logs location of your installation.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Then, it can be started either from the command line with
+```
+python tft_tracker_launcher.py
+```
 
-## Build
+Or simply by double clicking the `start_tft_tracker_latest_game.bat` file (has to be in the same folder as the python script file)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
