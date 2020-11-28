@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+html {
+  height: calc(100% - 60px);
+}
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+  height: 100%;
+}
+.app-container {
+  height: 100%;
+  padding: 30px;
+  text-align: center;
+  align-items: center;
+
+  .control-button-row {
+    .mat-button-base {
+      margin: 8px 8px 8px 0;
+    }
+  }
+
+  .content-area {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .player-tracking-area {
+    display: flex;
+    flex-direction: column;
+
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .player {
+      margin-bottom: 10px;
+      text-align: left;
+      height: 15px;
+
+      display: flex;
+      flex-direction: row;
+
+      &.ineligible {
+        background-color: lightgray;
+      }
+w      &.eliminated {
+        background-color: gray;
+      }
+
+      mat-card-title {
+        font-weight: normal;
+        font-size: 14px;
+        width: 30%;
+      }
+
+      .notes {
+        width: 70%;
+        font-size: 10px;
+        padding-left: 5px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .event-history-area {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+    mat-list-item {
+      height: 32px;
+    }
+  }
+}
