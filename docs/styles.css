@@ -30,7 +30,7 @@
   flex-direction: row;
 }.app-container .player-tracking-area .player.ineligible {
   background-color: lightgray;
-}w .app-container .player-tracking-area .player.eliminated {
+}.app-container .player-tracking-area .player.eliminated {
   background-color: gray;
 }.app-container .player-tracking-area .player mat-card-title {
   font-weight: normal;
