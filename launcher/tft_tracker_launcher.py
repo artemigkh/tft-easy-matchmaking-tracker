@@ -1,4 +1,4 @@
-LEAGUE_CLIENT_LOGS_LOCATION = 'C:\Riot Games\League of Legends\Logs\GameLogs'
+LEAGUE_CLIENT_LOGS_LOCATION = r'C:\Riot Games\League of Legends'
 BASE_URL = 'https://artemigkh.github.io/tft-easy-matchmaking-tracker/'
 
 import glob
@@ -30,7 +30,7 @@ def open_tracker_in_browser(player_names):
 
 
 def get_latest_game_log_path():
-    r3d_logs = glob.glob('{}\\*\\*_r3dlog.txt'.format(LEAGUE_CLIENT_LOGS_LOCATION))
+    r3d_logs = glob.glob('{}\\Logs\\GameLogs\\*\\*_r3dlog.txt'.format(LEAGUE_CLIENT_LOGS_LOCATION))
     return max(r3d_logs, key=os.path.getctime)
 
 
